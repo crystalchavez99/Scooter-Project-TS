@@ -1,4 +1,4 @@
-class User{
+export class User{
     username: string;
     password: string;
     age: number;
@@ -22,3 +22,4 @@ class User{
         this.loggedIn = false;
     }
 }
+
