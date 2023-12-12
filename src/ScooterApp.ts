@@ -43,6 +43,7 @@ export class ScooterApp {
             throw Error("No such user is logged in.");
         }
     }
+
     createScooter(station: string): Scooter{
         if(this.stations[station]){
             let made = new Scooter(station);
@@ -53,5 +54,20 @@ export class ScooterApp {
         }else{
             throw Error("No such station!");
         }
+    }
+
+    dockScooter(scooter: Scooter, station: string): void{
+        if(this.stations[station]){
+            this.stations[station].forEach(scoot =>{
+              if(scoot.serial === scooter.serial){
+                throw new Error("Scooter is already at station!")
+              }
+            });
+            this.stations[station].push(scooter);
+            scooter.dock(station)
+            console.log("Scooter is docked!")
+          }else{
+            throw Error("No such station!")
+          }
     }
 }
