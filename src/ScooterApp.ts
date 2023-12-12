@@ -85,4 +85,10 @@ export class ScooterApp {
           }
           throw Error("Scooter already rented!")
     }
+
+    print(): string{
+        console.log(`Users: ${Object.values(this.registeredUsers)}`)
+        console.log(`Stations: ${Object.entries(this.stations)}`)
+        return `Users: ${Object.values(this.registeredUsers)}\nStations: ${Object.entries(this.stations)}`
+      }
 }
