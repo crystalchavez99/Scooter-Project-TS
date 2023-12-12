@@ -70,4 +70,19 @@ export class ScooterApp {
             throw Error("No such station!")
           }
     }
+
+    rentScooter(scooter: Scooter, user: User): void{
+        for(let station in this.stations){
+            let currStation = this.stations[station];
+            for(let i = 0; i < currStation.length; i++){
+              if(currStation[i].serial === scooter.serial){
+                currStation.splice(i,1);
+                scooter.rent(user);
+                console.log("Scooter is rented!")
+                return;
+              }
+            }
+          }
+          throw Error("Scooter already rented!")
+    }
 }
