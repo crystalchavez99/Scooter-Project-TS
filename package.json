@@ -1,0 +1,23 @@
+{
+  "name": "scooter-project-ts",
+  "version": "1.0.0",
+  "description": "An Electric Scooter Hire App System with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch-all --verbose",
+    "test:coverage": "jest --verbose --collect-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crystalchavez99/Scooter-Project-TS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crystalchavez99/Scooter-Project-TS/issues"
+  },
+  "homepage": "https://github.com/crystalchavez99/Scooter-Project-TS#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
