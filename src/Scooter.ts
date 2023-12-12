@@ -24,4 +24,10 @@ export class Scooter{
             this.station = null;
         }
     }
+    dock(station):void{
+        this.user = null;
+        this.station = station;
+        this.charge = 10;
+        this.isBroken = true;
+    }
 } 

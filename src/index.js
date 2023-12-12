@@ -1,6 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var User_1 = require("./User");
+var Scooter_1 = require("./Scooter");
 var createdUser = new User_1.User(":)", "shawny", 28);
 createdUser.login("shawny");
 console.log(createdUser);
+var newScooter = new Scooter_1.Scooter("Wilson Language");
+newScooter.rent(createdUser);
+console.log("just rented", newScooter);
+var coolScooter = new Scooter_1.Scooter("Wilson Language");
+console.log(coolScooter);
+newScooter.dock("Wilson Language");
+console.log("Scooter returned", newScooter);
