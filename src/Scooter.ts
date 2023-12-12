@@ -1,7 +1,7 @@
 import {User} from './User'
 export class Scooter{
-    station: string;
-    user: User;
+    station: string | null;
+    user: User | null;
     serial: number;
     charge: number;
     isBroken: boolean;
